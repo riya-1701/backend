@@ -29,7 +29,7 @@ db.connect((err) => {
   if (err) {
     console.error("MySQL connection failed:", err.message);
   } else {
-    console.log("Database Connected Successfully");
+    console.log("Database Connected Successfully to MYSQL RDS");
   }
 });
 
