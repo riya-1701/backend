@@ -17,7 +17,12 @@ app.get("/", (req, res) => {
 
 //Frontend is served at: http://127.0.0.1:5500 and backend (API) is served at: http://localhost:3000.
 // So when frontend (port 5500) tries to access backend (port 3000), browser blocks the request — unless the backend explicitly allows it using CORS.
-app.use(cors());
+app.use(
+  cors({
+    origin: "login-system-sable.vercel.app",
+    credentials: true,
+  })
+);
 
 // This line is required to parse JSON request body
 app.use(express.json());
