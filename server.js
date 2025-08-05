@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 // So when frontend (port 5500) tries to access backend (port 3000), browser blocks the request — unless the backend explicitly allows it using CORS.
 app.use(
   cors({
-    origin: "login-system-sable.vercel.app",
+    origin: "https://login-system-sable.vercel.app",
     credentials: true,
   })
 );
